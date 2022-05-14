@@ -31,4 +31,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'api-publisher' => [
+        'base_url' => env('API_PUBLISHER_BASE_URL'),
+        'token' => env('API_PUBLISHER_TOKEN'),
+    ]
+
 ];
