@@ -2,6 +2,7 @@
 
 namespace App\Http\Integrations\ApiPublisher;
 
+use App\Http\Integrations\ApiPublisher\Auth\TokenBearer;
 use Sammyjo20\Saloon\Http\SaloonConnector;
 use Sammyjo20\Saloon\Interfaces\AuthenticatorInterface;
 use Sammyjo20\Saloon\Traits\Plugins\AcceptsJson;
@@ -17,7 +18,7 @@ class ApiPublisher extends SaloonConnector
      */
     public function defaultAuth(): ?AuthenticatorInterface
     {
-        return new Auth\TokenBearer();
+        return new TokenBearer();
     }
 
     /**

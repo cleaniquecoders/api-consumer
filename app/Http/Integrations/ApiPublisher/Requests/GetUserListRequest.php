@@ -6,7 +6,7 @@ use App\Http\Integrations\ApiPublisher\ApiPublisher;
 use Sammyjo20\Saloon\Constants\Saloon;
 use Sammyjo20\Saloon\Http\SaloonRequest;
 
-class GetUserProfileRequest extends SaloonRequest
+class GetUserListRequest extends SaloonRequest
 {
     /**
      * The connector class.
@@ -22,10 +22,6 @@ class GetUserProfileRequest extends SaloonRequest
      */
     protected ?string $method = Saloon::GET;
 
-    public function __construct(
-        public string $email,
-    ){}
-
     /**
      * The endpoint of the request.
      *
@@ -33,6 +29,6 @@ class GetUserProfileRequest extends SaloonRequest
      */
     public function defineEndpoint(): string
     {
-        return '/user/' . $this->email;
+        return '/user';
     }
 }
